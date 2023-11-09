@@ -14,6 +14,8 @@ public record DadosCadastroMedico(
         @Email                   //confirma se é um email
         String email,
         @NotBlank
+        String telefone,
+        @NotBlank
         @Pattern(regexp = "\\d{4,6}")      //expressão regular pra ter de 4 a 6 digitor na string crm
         String crm,
         @NotNull
