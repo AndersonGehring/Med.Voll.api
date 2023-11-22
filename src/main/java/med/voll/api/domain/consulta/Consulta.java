@@ -1,5 +1,6 @@
 package med.voll.api.domain.consulta;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -31,4 +32,11 @@ public class Consulta {
     private Paciente paciente;
 
     private LocalDateTime data;
+
+    public Consulta(Long id, Medico medico, Paciente paciente, LocalDateTime data) {
+        this.id = id;
+        this.medico = medico;
+        this.paciente = paciente;
+        this.data = data;
+    }
 }
